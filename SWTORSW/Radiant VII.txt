@@ -1,0 +1,4 @@
+Radiant VII	Corellia	0	Corporate Sector	9
+Radiant VII	Corporate Sector	13	Kessel	22
+Radiant VII	Kessel	26	Mon Calamari	35
+Radiant VII	Mon Calamari	39	Corellia	45

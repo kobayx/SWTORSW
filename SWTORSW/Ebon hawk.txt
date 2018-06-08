@@ -1,0 +1,3 @@
+Ebon Hawk	Yaga_Minor	0	Corellia	12
+Ebon Hawk	Corellia	16	Coruscant	20
+Ebon Hawk	Coruscant	24	Yaga_minor	39

@@ -1,0 +1,2 @@
+Millenium Falcon	Corellia	0	Kessel	10
+Millenium Falcon	Kessel	14	Corellia	24

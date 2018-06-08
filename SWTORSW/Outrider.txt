@@ -1,0 +1,7 @@
+Outrider	Tatooine	0	Dagobah	28
+Outrider	Dagobah	32	Dantooine	64
+Outrider	Dantooine	68	Alderaan	81
+Outrider	Alderaan	85	Yavin	90
+Outrider	Yavin	94	Endor	104
+Outrider	Endor	108	Hoth	168
+Outrider	Hoth	172	Tatooine	228

@@ -1,0 +1,3 @@
+XS Freighter	Gamorr	0	Sullust	74
+XS Freighter	Sullust	78	Yavin	95
+XS Freighter	Yavin	99	Gamorr	154

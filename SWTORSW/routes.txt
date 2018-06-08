@@ -1,0 +1,39 @@
+Andromeda Ascendant	Corellia	0	Corulag	1
+Andromeda Ascendant	Corulag	5	Esseles	9
+Andromeda Ascendant	Esseles	13	Coruscant	21
+Andromeda Ascendant	Coruscant	25	Corellia	29
+Ebon Hawk	Yaga Minor	0	Corellia	12
+Ebon Hawk	Corellia	16	Coruscant	20
+Ebon Hawk	Coruscant	24	Yaga Minor	39
+Ghost	Chandrila	0	Corulag	1
+Ghost	Corulag	5	Brentaal	7
+Ghost	Brentaal	11	Rhinnal	16
+Ghost	Rhinnal	20	Ralltiir	21
+Ghost	Ralltiir	25	Esseles	29
+Ghost	Esseles	33	Chandrila	36
+Millenium Falcon	Corellia	0	Kessel	10
+Millenium Falcon	Kessel	14	Corellia	24
+Outrider	Tatooine	0	Dagobah	28
+Outrider	Dagobah	32	Dantooine	64
+Outrider	Dantooine	68	Alderaan	81
+Outrider	Alderaan	85	Yavin	90
+Outrider	Yavin	94	Endor	104
+Outrider	Endor	108	Hoth	168
+Outrider	Hoth	172	Tatooine	228
+Radiant VII	Corellia	0	Corporate Sector	9
+Radiant VII	Corporate Sector	13	Kessel	22
+Radiant VII	Kessel	26	Mon Calamari	35
+Radiant VII	Mon Calamari	39	Corellia	45
+Serenity	Bakura	0	Hapes Cluster	11
+Serenity	Hapes Cluster	15	Mon Calamari	33
+Serenity	Mon Calamari	37	Bakura	59
+Slave I	Myrkr	0	Wayland	21
+Slave I	Wayland	25	Yaga Minor	55
+Slave I	Yaga Minor	59	Kashyyyk	112
+Slave I	Kashyyyk	116	Myrkr	171
+Tantive IV	Corellia	0	Yavin	15
+Tantive IV	Yavin	19	Bespin	30
+Tantive IV	Bespin	34	Corellia	40
+XS Freighter	Gamorr	0	Sullust	74
+XS Freighter	Sullust	78	Yavin	95
+XS Freighter	Yavin	99	Gamorr	154

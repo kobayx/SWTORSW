@@ -1,0 +1,4 @@
+Slave I	Myrkr	0	Wayland	21
+Slave I	Wayland	25	Yaga Minor	55
+Slave I	Yaga Minor	59	Kashyyyk	112
+Slave I Kashyyyk	116	Myrkr	171

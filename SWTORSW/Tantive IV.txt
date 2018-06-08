@@ -1,0 +1,3 @@
+Tantive IV	Corellia	0	Yavin	15
+Tantive IV	Yavin	19	Bespin	30
+Tantive IV	Bespin	34	Corellia	40

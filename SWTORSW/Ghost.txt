@@ -1,0 +1,6 @@
+Ghost	Chandrila	0	Corulag	1
+Ghost	Corulag	5	Brentaal	7
+Ghost	Brentaal	11	Rhinnal	16
+Ghost	Rhinnal	20	Ralltiir	21
+Ghost	Ralltiir	25	Esseles	29
+Ghost	Esseles	33	Chandrila	36	
