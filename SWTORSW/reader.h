@@ -16,8 +16,7 @@ struct Travel_Times {
 class Reader {
 public:
 
-	Reader(int i);
-	Reader(std::fstream& in, Travel_Times * constraints, std::string filename);
+	Reader(std::string filename);
 	Galaxy* load();
 
 
@@ -33,10 +32,9 @@ private:
 	// previous leg or the beginning of the route for another ship.
 	bool validate();
 
-	Fleet uss;
 
 	// Data structure holding the travel times between planets.
-	Travel_Times* constraints = new Travel_Times();
+	Travel_Times* constraints;
 
 	// Input string representing a single leg.
 	std::string current_input_line;

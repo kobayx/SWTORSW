@@ -2,12 +2,13 @@
 #include "priority.h"
 #include "galaxy.h"
 #include "reader.h"
+#include <fstream>
 
 using namespace std;
 
 int main() {
-	fstream fin;
-	Travel_Times travel;
-	Reader red(fin, travel, "routes.txt");
+
+	Reader red("routes.txt");
+	red.load();
 	return 0;
 }

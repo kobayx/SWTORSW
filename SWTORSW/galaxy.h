@@ -32,7 +32,7 @@ typedef int Ship_ID;
 class Planet;
 class Galaxy;
 
-// DO FIRST
+
 // Class Fleet maps internal ship ID to the ship's name .
 class Fleet {
 public:
