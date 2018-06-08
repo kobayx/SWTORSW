@@ -36,7 +36,8 @@ bool Reader::get_record()
 	char c[256] = { 0 };
 	char peeker;
 	std::map<const Planet*, Edge*> innerTime;
-	Edge* edg;
+	Edge* edge_;
+	Leg leg_;
 	peeker = fin.peek();
 	if (peeker == '#' || isspace(peeker))
 		fin.ignore(256, '\n');
@@ -50,12 +51,14 @@ bool Reader::get_record()
 			ships.insert(std::pair<std::string,int>(current_input_line, ships.size()));
 			ship_id = ships.size() - 1;
 		} else if (i == 1) {
+			//if (!planets.find(current_input_line))
 			Planet * newPlanet = new Planet(current_input_line);
 			planets.insert(std::pair<std::string, Planet*>(current_input_line, newPlanet));
 			departure_planet = newPlanet;
 		} else if (i == 2) {
 			departure_time = std::stoi(current_input_line);
 		} else if (i == 3) {
+		//	if (planets.(current_input_line))
 			Planet*newPlanet2 = new Planet(current_input_line);
 			planets.insert(std::pair<std::string, Planet*>(current_input_line, newPlanet2));
 			destination_planet = newPlanet2;
@@ -63,8 +66,12 @@ bool Reader::get_record()
 			arrival_time = std::stoi(current_input_line);
 		}
 	}
-	edg = new Edge(destination_planet);
-	innerTime.insert(std::pair<const Planet*, Edge*>(destination_planet, edg));
+	leg_.departure_time = departure_time;
+	leg_.arrival_time = arrival_time;
+	leg_.id = ship_id;
+	edge_ = new Edge(destination_planet);
+	edge_->add(leg_);
+	innerTime.insert(std::pair<const Planet*, Edge*>(destination_planet, edge_));
 	edges.insert(std::pair<const Planet*, std::map<const Planet*, Edge*>>(departure_planet, innerTime));
 
 	return true;
