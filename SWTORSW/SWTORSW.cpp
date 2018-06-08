@@ -6,6 +6,8 @@
 using namespace std;
 
 int main() {
-	Reader red;
+	fstream fin;
+	Travel_Times travel;
+	Reader red(fin, travel, "routes.txt");
 	return 0;
 }

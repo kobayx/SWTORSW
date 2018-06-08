@@ -16,7 +16,7 @@ struct Travel_Times {
 class Reader {
 public:
 
-	Reader();
+	Reader(int i);
 	Reader(std::fstream& in, Travel_Times * constraints, std::string filename);
 	Galaxy* load();
 

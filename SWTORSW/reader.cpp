@@ -4,17 +4,17 @@
 
 //typedef int Ship_ID;
 
-Reader::Reader()
+Reader::Reader(int i)
 {
 	fin.open("routes.txt");
 	Fleet uss;
-	while (get_record()) {}
 
 }
 
 Reader::Reader(std::fstream& in, Travel_Times * constraints, std::string filename)
 {
 	in.open(filename);
+	while (get_record()) {}
 }
 
 Galaxy * Reader::load()
