@@ -10,7 +10,7 @@
 
 
 struct Travel_Times {
-	std::map<Planet*, std::map<Planet*, int>> times;
+	std::map<Planet*, std::map<Planet*, int> > times;
 };
 
 class Reader {
