@@ -98,7 +98,7 @@ public:
 	// destination planet.
 	void sort();
 
-	void dump(Galaxy* galaxy);
+//	void dump(Galaxy* galaxy);
 
 	Planet* destination;
 	std::vector<Leg> departures;

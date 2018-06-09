@@ -56,7 +56,7 @@ private:
 	std::map<std::string, Planet*> planets;
 
 	// Planet-name pair to edge object
-	std::map<const Planet*, std::map<const Planet*, Edge*> > edges;
+	std::map<std::map<const Planet*, Edge*>, const Planet* > edges;
 
 	// Ship name to id.
 	std::map<std::string, Ship_ID> ships;

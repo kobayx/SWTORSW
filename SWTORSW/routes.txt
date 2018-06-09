@@ -12,7 +12,8 @@ Ghost	Rhinnal	20	Ralltiir	21
 Ghost	Ralltiir	25	Esseles	29
 Ghost	Esseles	33	Chandrila	36
 Millenium Falcon	Corellia	0	Kessel	10
-Millenium Falcon	Kessel	14	Corellia	24
+Millenium Falcon	Kessel	14	Hapes Cluster	26
+Millenium Falcon	Hapes Cluster	30	Corellia	51
 Outrider	Tatooine	0	Dagobah	28
 Outrider	Dagobah	32	Dantooine	64
 Outrider	Dantooine	68	Alderaan	81

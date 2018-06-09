@@ -7,8 +7,8 @@
 using namespace std;
 
 int main() {
-
 	Reader red("routes.txt");
-	red.load();
+	Galaxy* Gal(red.load());
+	Gal->search();
 	return 0;
 }

@@ -20,19 +20,22 @@ Reader::~Reader()
 Galaxy * Reader::load()
 {
 	while (get_record()) {}
+
 	for (auto item : planets)
 		galaxy->add(item.second);
+	
 	for (auto item : ships)
 		galaxy->fleet.add(item.first);
+	
 	for (unsigned int i = 0; i < galaxy->planets.size(); i++) {
 		for (auto item : edges) {
-			if (galaxy->planets[i]->name == item.first->name) {
-				for( auto itm : item.second)
+			if (galaxy->planets[i]->name == item.second->name) {
+				for( auto itm : item.first)
 					galaxy->planets[i]->add(itm.second);
 			}
 		}
 	}
-	return nullptr;
+	return galaxy;
 }
 
 bool Reader::get_record()
@@ -58,15 +61,22 @@ bool Reader::get_record()
 			ships.insert(std::pair<std::string,int>(current_input_line, ships.size()));
 			ship_id = ships.size() - 1;
 		} else if (i == 1) {
-			Planet * newPlanet = new Planet(current_input_line);
-			planets.insert(std::pair<std::string, Planet*>(current_input_line, newPlanet));
-			departure_planet = newPlanet;
+		//	if (planets.find(current_input_line) == planets.end()) {
+				Planet* newPlanet = new Planet(current_input_line);
+				planets.insert(std::pair<std::string, Planet*>(current_input_line, newPlanet));
+		//	}
+			departure_planet = planets[current_input_line];
+			//departure_planet = newPlanet;
 		} else if (i == 2) {
 			departure_time = std::stoi(current_input_line);
 		} else if (i == 3) {
-			Planet*newPlanet2 = new Planet(current_input_line);
-			planets.insert(std::pair<std::string, Planet*>(current_input_line, newPlanet2));
-			destination_planet = newPlanet2;
+		//	if (planets.find(current_input_line) == planets.end()) {
+				Planet* newPlanet2 = new Planet(current_input_line);
+				planets.insert(std::pair<std::string, Planet*>(current_input_line, newPlanet2));
+			//}
+			destination_planet = planets[current_input_line];
+		//	destination_planet = newPlanet2;
+			
 		} else if (i == 4) {
 			arrival_time = std::stoi(current_input_line);
 		}
@@ -77,12 +87,28 @@ bool Reader::get_record()
 	edge_ = new Edge(destination_planet);
 	edge_->add(leg_);
 	innerTime.insert(std::pair<const Planet*, Edge*>(destination_planet, edge_));
-	edges.insert(std::pair<const Planet*, std::map<const Planet*, Edge*>>(departure_planet, innerTime));
+	edges.insert(std::pair<std::map<const Planet*, Edge*>, const Planet*>(innerTime, departure_planet));
 
 	return true;
 }
 
 bool Reader::validate()
 {
+	Travel_Times times_;
+	fin.open("conduits.txt");
+	char c[256];
+	std::string str;
+
+	// checks to see if the planets match
+	while (!fin.eof()) {
+		fin.getline(c, 256, '\n');
+		std::stringstream ss(c);
+			for (int i = 0; i < 2; i++) {
+				std::getline(ss, str, '\t');
+				if (planets.find(str) == planets.end())
+						return false;
+				return true;
+			}
+	}
 	return false;
 }
