@@ -17,6 +17,7 @@ class Reader {
 public:
 
 	Reader(std::string filename);
+	~Reader();
 	Galaxy* load();
 
 

@@ -10,6 +10,13 @@ Reader::Reader(std::string filename)
 	constraints = new Travel_Times();
 }
 
+Reader::~Reader()
+{
+	fin.close();
+	delete galaxy;
+	delete constraints;
+}
+
 Galaxy * Reader::load()
 {
 	while (get_record()) {}
@@ -51,14 +58,12 @@ bool Reader::get_record()
 			ships.insert(std::pair<std::string,int>(current_input_line, ships.size()));
 			ship_id = ships.size() - 1;
 		} else if (i == 1) {
-			//if (!planets.find(current_input_line))
 			Planet * newPlanet = new Planet(current_input_line);
 			planets.insert(std::pair<std::string, Planet*>(current_input_line, newPlanet));
 			departure_planet = newPlanet;
 		} else if (i == 2) {
 			departure_time = std::stoi(current_input_line);
 		} else if (i == 3) {
-		//	if (planets.(current_input_line))
 			Planet*newPlanet2 = new Planet(current_input_line);
 			planets.insert(std::pair<std::string, Planet*>(current_input_line, newPlanet2));
 			destination_planet = newPlanet2;
