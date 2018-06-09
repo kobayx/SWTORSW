@@ -84,7 +84,3 @@ void Galaxy::dump()
 	for (auto item : planets)
 		item->dump(this);
 }
-
-void Galaxy::dump_routes(Planet * origin, std::ostream & out)
-{
-}
